@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row">
+            {% for cat in cats %}
+            <div class="col-md-6">
+                <div class="card mb-4 box-shadow">
+                    <img class="card-img-top"
+                        data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
+                        alt="Thumbnail [100%x225]" style="width: 100%; display: block;" src="{{ cat.photo.url }}"
+                        data-holder-rendered="true">
+                    <div class="card-body">
+                        <h3>Имя: {{ cat.name }}</h3>
+
+                        {% if cat.birthday %}
+
+                        <h6>Дата рождения: {{ cat.birthday}}</h6>
+                        {% endif %}
+
+                        {% if cat.description %}
+
+                        <p class="card-text">{{cat.description|truncatewords:6}}</p>
+                        {% endif %}
+
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+{% endblock content %}

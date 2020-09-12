@@ -1,0 +1,124 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Питомник "Северное созвездие"</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    {% block extrahead %}
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    {% endblock %}
+    <style>
+        body {
+            font-family: Georgia;
+        }
+    </style>
+</head>
+
+<body style="background-image: url('{%static 'background.jpg' %}'); ">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Северное созвездие</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'mainUrl' %}">Главная<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sold_catsUrl' %}">Наши выпускиники</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'catsUrl' %}">Котята для вас</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'contactUrl' %}">Контакты</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="card border-0 shadow my-5">
+            <div class="card-body p-5">
+                <main role="main">
+
+                    {% block content %}
+                    Здесь пока ничего нет
+                    {% endblock content %}
+
+
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <footer class="text-muted">
+
+        <div class="container">
+            <address>
+                <div class="row">
+
+                    <div class="col-lg-4">
+                        <p><strong>Email</strong>: kaln-irina@yandex.ru</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p><strong>Номер телефона</strong>: 8-916-333-67-68</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <p> <a href="https://wa.me/79163336768"><strong>WhatsApp</strong></a> </p>
+                    </div>
+                </div>
+            </address>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="208" height="225" viewBox="0 0 208 225" preserveAspectRatio="none"
+        style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
+        <defs>
+            <style type="text/css"></style>
+        </defs><text x="0" y="11"
+            style="font-weight:bold;font-size:11pt;font-family:Arial, Helvetica, Open Sans, sans-serif">Thumbnail</text>
+    </svg>
+</body>
+<div></div>
+
+</html>
